@@ -10,9 +10,12 @@
   --contact-color-footer: rgba(255, 255, 255, 0.6);
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Raleway", sans-serif;
+  --boarder-bottom: #ececec;
+  --boarder-figcaption: #eeeeee;
 }
 * {
   margin: 0;
+  padding: 0;
 }
 ul {
   list-style: none;
@@ -29,15 +32,51 @@ body {
   color: var(--main-text-black);
   letter-spacing: 0.03em;
 }
+.section {
+  padding: 94px 0;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  height: 80px;
+  align-items: center;
+  border-bottom: var(--boarder-bottom) 1px solid;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav {
+  display: flex;
+}
+
 .logo {
   font-family: var(--font-secondary);
   color: var(--brand-color-blue);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-right: 93px;
+  margin-top: 24px;
 }
 .logo-dark {
   color: var(--logo-black);
+}
+.navigation {
+  display: flex;
+  column-gap: 46px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  column-gap: 50px;
 }
 .navigation a,
 .contact a {
@@ -55,6 +94,8 @@ body {
 }
 .main-title {
   background-color: var(--bgcolor-dark);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .main-title h1 {
   color: var(--header-background);
@@ -64,6 +105,13 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+.container-main-button {
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 .button1 {
   background-color: var(--brand-color-blue);
@@ -71,6 +119,9 @@ body {
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  padding: 10px 41px 10px 42px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .button2 button {
   font-family: var(--font-primary);
@@ -79,7 +130,28 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  justify-content: center;
+  padding: 6px 22px;
+  border-radius: 4px;
+  background-color: var(--portfolio-button-crew-color);
 }
+.button2 ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+.button2 li {
+  width: 370px;
+}
+.portfolio_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 0;
+  padding-top: 50px;
+}
+
 .button2 button:hover {
   background-color: var(--brand-color-blue);
   color: var(--header-background);
@@ -94,29 +166,91 @@ body {
   color: var(--contact-color);
   font-size: 14px;
   line-height: 1.71;
+  padding-top: 10px;
+  width: 270px;
+  height: 75px;
 }
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
+
+.tasks2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: row;
+}
+
 .our-team {
   background-color: var(--portfolio-button-crew-color);
 }
-figure {
+.our-team h2 {
+  margin-bottom: 50px;
+}
+.team-cards {
+  display: flex;
+  gap: 30px;
+  padding: 0px;
+}
+.team-cards li figure figcaption {
   background-color: var(--header-background);
+}
+.team-cards li {
+  width: 270px;
+  display: inline-block;
+  padding-right: 0px;
+  padding-left: ;
+}
+.person-class {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+figure {
+  background-color: var(--header-background) 1px solid;
 }
 figcaption h4 {
   font-weight: 500;
   line-height: 1.19;
+
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 figcaption p {
   color: var(--contact-color);
   line-height: 1.19;
+
+  padding-top: 10px;
+}
+img {
+  display: block;
+}
+figcaption {
+  border-bottom: var(--boarder-figcaption) solid 1px;
+  border-left: var(--boarder-figcaption) solid 1px;
+  border-right: var(--boarder-figcaption) solid 1px;
+  height: 108px;
+}
+.figcaption-main {
+  text-align: center;
+}
+.figcaption-portfolio {
+  padding-left: 24px;
 }
 .footer {
   background-color: var(--bgcolor-dark);
+  padding: 60px;
 }
 .logo-light {
   color: var(--header-background);
@@ -126,6 +260,15 @@ figcaption p {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+}
+.logo {
+  display: block;
+  padding-bottom: 20px;
+}
+address ul {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 .contact-footer {
   color: var(--contact-color-footer);
