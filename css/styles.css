@@ -41,13 +41,13 @@ body {
   margin: 0 auto;
 }
 header {
-  height: 80px;
-  align-items: center;
   border-bottom: var(--boarder-bottom) 1px solid;
+  box-sizing: border-box;
 }
 
 .container-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .header-nav {
@@ -61,7 +61,7 @@ header {
   font-size: 26px;
   line-height: 1.19;
   margin-right: 93px;
-  margin-top: 24px;
+  padding-top: 24px;
 }
 .logo-dark {
   color: var(--logo-black);
@@ -69,13 +69,10 @@ header {
 .navigation {
   display: flex;
   column-gap: 46px;
-  flex-wrap: wrap;
-  margin-top: 32px;
+  padding-top: 32px;
 }
 .contact {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 32px;
   column-gap: 50px;
 }
 .navigation a,
@@ -110,8 +107,6 @@ header {
 }
 .container-main-button {
   text-align: center;
-  padding-left: 150px;
-  padding-right: 150px;
 }
 .button1 {
   background-color: var(--brand-color-blue);
@@ -122,39 +117,40 @@ header {
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 .button2 button {
   font-family: var(--font-primary);
   color: var(--main-text-black);
   font-weight: 500;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
-  justify-content: center;
   padding: 6px 22px;
   border-radius: 4px;
   background-color: var(--portfolio-button-crew-color);
+  border: none;
 }
 .button2 ul {
   display: flex;
   justify-content: center;
   column-gap: 8px;
 }
-.button2 li {
-  width: 370px;
-}
+
 .portfolio_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding-left: 0;
   padding-top: 50px;
+  box-sizing: border-box;
 }
-
+.portfolio_content li {
+  padding-right: 23px;
+  padding-bottom: 30px;
+}
 .button2 button:hover {
   background-color: var(--brand-color-blue);
   color: var(--header-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .description li h3 {
   font-weight: 700;
@@ -167,13 +163,11 @@ header {
   font-size: 14px;
   line-height: 1.71;
   padding-top: 10px;
-  width: 270px;
-  height: 75px;
 }
 .description {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  gap: 30px;
 }
 
 h2 {
@@ -200,7 +194,6 @@ h2 {
 .team-cards {
   display: flex;
   gap: 30px;
-  padding: 0px;
 }
 .team-cards li figure figcaption {
   background-color: var(--header-background);
@@ -223,23 +216,20 @@ figure {
 figcaption h4 {
   font-weight: 500;
   line-height: 1.19;
-
   padding-top: 30px;
   padding-bottom: 10px;
 }
 figcaption p {
   color: var(--contact-color);
   line-height: 1.19;
-
   padding-top: 10px;
 }
 img {
   display: block;
 }
 figcaption {
-  border-bottom: var(--boarder-figcaption) solid 1px;
-  border-left: var(--boarder-figcaption) solid 1px;
-  border-right: var(--boarder-figcaption) solid 1px;
+  border: var(--boarder-figcaption) solid 1px;
+  border-top: none;
   height: 108px;
 }
 .figcaption-main {
